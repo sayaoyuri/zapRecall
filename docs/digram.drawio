@@ -7,10 +7,10 @@
                 <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;Deck&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
                     <mxGeometry x="160" y="290" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" style="edgeStyle=none;html=1;fontColor=#000000;" edge="1" parent="1" source="4" target="18">
+                <mxCell id="28" style="edgeStyle=none;html=1;fontColor=#000000;" parent="1" source="4" target="18" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" style="edgeStyle=none;html=1;fontColor=#000000;" edge="1" parent="1" source="4" target="17">
+                <mxCell id="29" style="edgeStyle=none;html=1;fontColor=#000000;" parent="1" source="4" target="17" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="&lt;font color=&quot;#000000&quot;&gt;App&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#ffffff;fillColor=#1ba1e2;strokeColor=#006EAF;" parent="1" vertex="1">
@@ -25,7 +25,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="22" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" edge="1" parent="1" source="6" target="21">
+                <mxCell id="22" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#000000;" parent="1" source="6" target="21" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="&lt;font color=&quot;#000000&quot;&gt;FlashCard&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
@@ -68,25 +68,25 @@
                 <mxCell id="16" value="flashCard&lt;br&gt;setAnswer" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" parent="1" vertex="1">
                     <mxGeometry x="40" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" style="edgeStyle=none;html=1;fontColor=#000000;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="7">
+                <mxCell id="30" style="edgeStyle=none;html=1;fontColor=#000000;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="17" target="7" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="cards" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                <mxCell id="17" value="cards" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
                     <mxGeometry x="250" y="150" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="18" target="3">
+                <mxCell id="20" style="edgeStyle=none;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="18" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" style="edgeStyle=none;html=1;fontColor=#000000;" edge="1" parent="1" source="18" target="31">
+                <mxCell id="32" style="edgeStyle=none;html=1;fontColor=#000000;" parent="1" source="18" target="31" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="answers" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
+                <mxCell id="18" value="answers" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" parent="1" vertex="1">
                     <mxGeometry x="410" y="150" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="&lt;font color=&quot;#000000&quot;&gt;click play -&amp;gt; Show question&lt;br&gt;click turn card -&amp;gt; show answer&lt;br&gt;click asnwer button -&amp;gt; addAnswer ( ) , display card as answered&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                <mxCell id="21" value="&lt;font color=&quot;#000000&quot;&gt;click play -&amp;gt; Show question&lt;br&gt;click turn card -&amp;gt; show answer&lt;br&gt;click asnwer button -&amp;gt; addAnswer ( ) , display card as answered&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
                     <mxGeometry x="80" y="530" width="280" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="&lt;font color=&quot;#000000&quot;&gt;objects array&amp;nbsp;&lt;br&gt;{&lt;br&gt;card:&amp;nbsp;&lt;br&gt;answer:&lt;br&gt;}&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                <mxCell id="31" value="&lt;font color=&quot;#000000&quot;&gt;objects array&amp;nbsp;&lt;br&gt;{&lt;br&gt;cardIndex:&amp;nbsp;&lt;br&gt;answer:&lt;br&gt;}&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
                     <mxGeometry x="590" y="110" width="280" height="150" as="geometry"/>
                 </mxCell>
             </root>
