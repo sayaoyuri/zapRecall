@@ -10,6 +10,6 @@ export const flashCards = [
 ];
 
 const aux = [];
-flashCards.forEach((card, i) => aux.push({status: 'toAnswer', answer: ''}));
+flashCards.forEach((card, i) => aux.push({status: 'toPlay', answer: ''}));
 	
 export const statuses = [...aux];

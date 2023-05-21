@@ -21,17 +21,31 @@ function FlashCard( props ) {
     setCardsStatus(aux);
   }
 
+  function playCard (i) {
+    const aux = [...cardsStatus];
+
+    aux[i].status = 'toTurn';
+    setCardsStatus(aux);
+  }
+
+  function turnCard (i) {
+    const aux = [...cardsStatus];
+
+    aux[i].status = 'toAnswer';
+    setCardsStatus(aux);
+  }
+
   return (
     <>
       { cardStatus === 'toPlay' ?
           <CardToPlay>
             <h1>{`Pergunta ${index + 1}`}</h1>
-            <img src={playArrow} alt="Play arrow" />
+            <img src={playArrow} onClick={() => playCard(index)} alt="Play arrow" />
           </CardToPlay>
           : cardStatus === 'toTurn' ?
             <CardToTurn>
               <p>{card.question}</p>
-              <img src={turnArrow} alt="Turn arrow" />
+              <img src={turnArrow} onClick={() => turnCard(index)} alt="Turn arrow" />
             </CardToTurn>
           : cardStatus === 'toAnswer' ?
             <CardToAnswer>
