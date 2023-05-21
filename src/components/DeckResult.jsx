@@ -4,7 +4,7 @@ function DeckResult(props) {
   const {answered, cardsQt} = props;
 
   return (
-    <DeckResultContainer>
+    <DeckResultContainer data-test="footer">
       <p>{`${answered}/${cardsQt} CONCLUÍDOS`}</p>
     </DeckResultContainer>
   );

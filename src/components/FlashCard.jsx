@@ -39,28 +39,31 @@ function FlashCard( props ) {
   return (
     <>
       { cardStatus === 'toPlay' ?
-          <CardToPlay>
-            <h1>{`Pergunta ${index + 1}`}</h1>
-            <img src={playArrow} onClick={() => playCard(index)} alt="Play arrow" />
+          <CardToPlay data-test="flashcard">
+            <h1 data-test="flashcard-text">{`Pergunta ${index + 1}`}</h1>
+            <img src={playArrow} onClick={() => playCard(index)} alt="Play arrow" data-test="play-btn"/>
           </CardToPlay>
           : cardStatus === 'toTurn' ?
-            <CardToTurn>
-              <p>{card.question}</p>
-              <img src={turnArrow} onClick={() => turnCard(index)} alt="Turn arrow" />
+            <CardToTurn data-test="flashcard">
+              <p data-test="flashcard-text">{card.question}</p>
+              <img src={turnArrow} onClick={() => turnCard(index)} alt="Turn arrow" data-test="turn-btn"/>
             </CardToTurn>
           : cardStatus === 'toAnswer' ?
-            <CardToAnswer>
-              <p>{card.answer}</p>
+            <CardToAnswer data-test="flashcard">
+              <p data-test="flashcard-text">{card.answer}</p>
               <div>
-                <button onClick={(ev) => answer(ev, index)} value='error' >Não lembrei</button>
-                <button onClick={(ev) => answer(ev, index)} value='almost' >Quase não lembrei</button>
-                <button onClick={(ev) => answer(ev, index)} value='right' >Zap!</button>
+                <button onClick={(ev) => answer(ev, index)} value='error' data-test="no-btn">Não lembrei</button>
+                <button onClick={(ev) => answer(ev, index)} value='almost' data-test="partial-btn">Quase não lembrei</button>
+                <button onClick={(ev) => answer(ev, index)} value='right' data-test="zap-btn">Zap!</button>
               </div>
-            </CardToAnswer>
+            </CardToAnswer >
             : cardStatus === 'answered' ?
-              <CardAnswered cardAnswer={cardAnswer}>
-                <h1>{`Pergunta ${index + 1}`}</h1>
-                <img src={cardAnswer === 'error' ? error : cardAnswer === 'almost' ? almost : right} alt="" />
+              <CardAnswered cardAnswer={cardAnswer} data-test="flashcard">
+                <h1 data-test="flashcard-text">{`Pergunta ${index + 1}`}</h1>
+                <img 
+                  src={cardAnswer === 'error' ? error : cardAnswer === 'almost' ? almost : right}
+                  data-test={cardAnswer === 'error' ? 'no-icon' : cardAnswer === 'almost' ? 'partial-icon' : 'zap-icon'}
+                />
               </CardAnswered>
             : ''
       }
