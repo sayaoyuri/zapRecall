@@ -3,11 +3,11 @@ import styled from "styled-components";
 import FlashCard from './FlashCard';
 
 function Deck(props) {
-  const {flashCards, cardsStatus, setCardsStatus} = props;
+  const {flashCards, cardsStatus, setCardsStatus, answered, setAnswered} = props;
 
   return (
     <DeckContainer>
-      {flashCards.map( (card, i) => <FlashCard key={i} index={i} card={card} cardStatus={cardsStatus[i].status} cardAnswer={cardsStatus[i].answer} setCardsStatus={setCardsStatus} cardsStatus={cardsStatus}/> )}
+      {flashCards.map( (card, i) => <FlashCard key={i} index={i} card={card} cardStatus={cardsStatus[i].status} cardAnswer={cardsStatus[i].answer} setCardsStatus={setCardsStatus} cardsStatus={cardsStatus} answered={answered} setAnswered={setAnswered}/> )}
     </DeckContainer>
   );
 }

@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-function DeckResult() {
+function DeckResult(props) {
+  const {answered, cardsQt} = props;
+
   return (
     <DeckResultContainer>
-      <p>0/4 CONCLUÍDOS</p>
+      <p>{`${answered}/${cardsQt} CONCLUÍDOS`}</p>
     </DeckResultContainer>
   );
 }

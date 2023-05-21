@@ -11,7 +11,8 @@ import { flashCards } from "../mock";
 import { statuses } from "../mock";
 
 function App() {
-  const [cardsStatus, setCardsStatus] = useState( [...statuses] )
+  const [cardsStatus, setCardsStatus] = useState( [...statuses] );
+  const [answered, setAnswered] = useState(0);
 
   return (
     <AppContainer>
@@ -20,8 +21,8 @@ function App() {
         <img src={logo} alt="ZapRecall logo" />
         <h1>ZapRecall</h1>
       </header>
-      <Deck flashCards={flashCards} cardsStatus={cardsStatus} setCardsStatus={setCardsStatus}/>
-      <DeckResult />
+      <Deck flashCards={flashCards} cardsStatus={cardsStatus} setCardsStatus={setCardsStatus} answered={answered} setAnswered={setAnswered}/>
+      <DeckResult answered={answered} cardsQt={flashCards.length}/>
     </AppContainer>
   );
 }

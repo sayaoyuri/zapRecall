@@ -8,7 +8,7 @@ import right from '../assets/icone_certo.png';
 
 function FlashCard( props ) {
 
-  const {card, index, cardStatus, cardAnswer, cardsStatus, setCardsStatus} = props;
+  const {card, index, cardStatus, cardAnswer, cardsStatus, setCardsStatus, answered, setAnswered} = props;
   console.log(cardStatus);
 
   function answer(ev, i) {
@@ -19,6 +19,7 @@ function FlashCard( props ) {
     aux[i].answer = ev.target.value;
 
     setCardsStatus(aux);
+    setAnswered(answered + 1);
   }
 
   function playCard (i) {
