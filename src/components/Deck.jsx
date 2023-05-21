@@ -2,17 +2,12 @@ import styled from "styled-components";
 
 import FlashCard from './FlashCard';
 
-function Deck() {
+function Deck(props) {
+  const {flashCards, cardsStatus, setCardsStatus} = props;
+
   return (
     <DeckContainer>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
-      <FlashCard></FlashCard>
+      {flashCards.map( (card, i) => <FlashCard key={i} index={i} card={card} cardStatus={cardsStatus[i].status} cardAnswer={cardsStatus[i].answer} setCardsStatus={setCardsStatus} cardsStatus={cardsStatus}/> )}
     </DeckContainer>
   );
 }
@@ -20,7 +15,6 @@ function Deck() {
 export default Deck;
 
 const DeckContainer = styled.ul`
-/* background-color: blue; */
   width: 300px;
   margin: 60px 0px;
   display: flex;

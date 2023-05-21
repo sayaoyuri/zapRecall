@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import GlobalStyle from "../assets/syle/GlobalStyle";
 
@@ -6,7 +7,12 @@ import DeckResult from "./DeckResult";
 
 import logo from '../assets/logo.png';
 
+import { flashCards } from "../mock";
+import { statuses } from "../mock";
+
 function App() {
+  const [cardsStatus, setCardsStatus] = useState( [...statuses] )
+
   return (
     <AppContainer>
       <GlobalStyle></GlobalStyle>
@@ -14,7 +20,7 @@ function App() {
         <img src={logo} alt="ZapRecall logo" />
         <h1>ZapRecall</h1>
       </header>
-      <Deck />
+      <Deck flashCards={flashCards} cardsStatus={cardsStatus} setCardsStatus={setCardsStatus}/>
       <DeckResult />
     </AppContainer>
   );
