@@ -3,11 +3,23 @@ import styled from "styled-components";
 import playArrow from '../assets/seta_play.png';
 import turnArrow from '../assets/seta_virar.png';
 import error from '../assets/icone_erro.png';
+import almost from '../assets/icone_quase.png';
+import right from '../assets/icone_certo.png';
 
 function FlashCard( props ) {
 
   const {card, index, cardStatus, cardAnswer, cardsStatus, setCardsStatus} = props;
   console.log(cardStatus);
+
+  function answer(ev, i) {
+
+    const aux = [...cardsStatus];
+
+    aux[i].status = 'answered';
+    aux[i].answer = ev.target.value;
+
+    setCardsStatus(aux);
+  }
 
   return (
     <>
@@ -25,15 +37,15 @@ function FlashCard( props ) {
             <CardToAnswer>
               <p>{card.answer}</p>
               <div>
-                <button>Não lembrei</button>
-                <button>Quase não lembrei</button>
-                <button>Zap!</button>
+                <button onClick={(ev) => answer(ev, index)} value='error' >Não lembrei</button>
+                <button onClick={(ev) => answer(ev, index)} value='almost' >Quase não lembrei</button>
+                <button onClick={(ev) => answer(ev, index)} value='right' >Zap!</button>
               </div>
             </CardToAnswer>
             : cardStatus === 'answered' ?
-              <CardAnswered>
+              <CardAnswered cardAnswer={cardAnswer}>
                 <h1>{`Pergunta ${index + 1}`}</h1>
-                <img src={error} alt="" />
+                <img src={cardAnswer === 'error' ? error : cardAnswer === 'almost' ? almost : right} alt="" />
               </CardAnswered>
             : ''
       }
@@ -140,10 +152,13 @@ const CardAnswered = styled(Card)`
   align-items: center;
 
   h1 {
+    font-weight: 700;
+    color: ${props => props.cardAnswer === 'error' ? '#FF3030' : props.cardAnswer === 'almost' ? '#FF922E' : '#2FBE34' };
     text-decoration: line-through;
   }
 
   img {
+    src: ${props => props.cardAnswer === 'error' ? error : props.cardAnswer === 'almost' ? almost : right };
     width: 23px;
     height: 23px;
   }
