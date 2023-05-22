@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import FlashCard from './FlashCard';
+import FlashCard from './flashcard/FlashCard';
 
 function Deck(props) {
   const {flashCards, cardsStatus, setCardsStatus, answered, setAnswered} = props;
