@@ -7,13 +7,13 @@ import right from '../../assets/icone_certo.png';
 
 function CardAnswered(props) {
   const {cardAnswer, index} = props;
-  // console.log(cardAnswer);
+
   return(
     <CardContainer cardAnswer={cardAnswer} data-test="flashcard">
-      <h1 data-test="flashcard-text">{`Pergunta ${props.index + 1}`}</h1>
+      <h1 data-test="flashcard-text">{`Pergunta ${index + 1}`}</h1>
       <img 
-        src={props.cardAnswer === 'error' ? error : props.cardAnswer === 'almost' ? almost : right}
-        data-test={props.cardAnswer === 'error' ? 'no-icon' : props.cardAnswer === 'almost' ? 'partial-icon' : 'zap-icon'}
+        src={cardAnswer === 'error' ? error : cardAnswer === 'almost' ? almost : right}
+        data-test={cardAnswer === 'error' ? 'no-icon' : cardAnswer === 'almost' ? 'partial-icon' : 'zap-icon'}
       />
     </CardContainer>
   );

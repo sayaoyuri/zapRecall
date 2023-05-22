@@ -1,12 +1,10 @@
 import styled from "styled-components";
-
 import { Card } from "./CardModel";
 
 function CardToAnswer(props) {
   const {card, index, answered, setAnswered, cardsStatus, setCardsStatus} = props;
 
   function answer(ev, i) {
-
     const aux = [...cardsStatus];
 
     aux[i].status = 'answered';

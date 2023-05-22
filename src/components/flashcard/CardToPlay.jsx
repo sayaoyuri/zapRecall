@@ -4,7 +4,6 @@ import {Card} from './CardModel';
 import playArrow from '../../assets/seta_play.png';
 
 function CardToPlay(props) {
-
   const {index, cardsStatus, setCardsStatus} = props;
 
   function playCard (i) {
